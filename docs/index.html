@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>쇼츠 리빙 키워드 대시보드</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0f0f0f;
+      color: #e8e8e8;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ff0000 0%, #c00000 100%);
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .logo { display: flex; align-items: center; gap: 12px; }
+    .logo-icon { font-size: 32px; }
+    .logo-text h1 { font-size: 22px; font-weight: 700; color: #fff; }
+    .logo-text p { font-size: 13px; color: rgba(255,255,255,0.8); margin-top: 2px; }
+    .updated { font-size: 12px; color: rgba(255,255,255,0.7); text-align: right; }
+
+    .controls {
+      padding: 20px 32px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      background: #1a1a1a;
+      border-bottom: 1px solid #2a2a2a;
+    }
+    .search-box {
+      flex: 1;
+      min-width: 200px;
+      max-width: 400px;
+      padding: 10px 16px;
+      border-radius: 24px;
+      border: 1px solid #333;
+      background: #0f0f0f;
+      color: #e8e8e8;
+      font-size: 14px;
+      outline: none;
+    }
+    .search-box:focus { border-color: #ff0000; }
+    .search-box::placeholder { color: #666; }
+
+    .sort-btn {
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 1px solid #333;
+      background: #0f0f0f;
+      color: #aaa;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .sort-btn:hover { border-color: #ff0000; color: #fff; }
+    .sort-btn.active { background: #ff0000; border-color: #ff0000; color: #fff; }
+
+    .stats-bar {
+      display: flex;
+      gap: 24px;
+      padding: 16px 32px;
+      background: #141414;
+      border-bottom: 1px solid #2a2a2a;
+      flex-wrap: wrap;
+    }
+    .stat { text-align: center; }
+    .stat-num { font-size: 22px; font-weight: 700; color: #ff0000; }
+    .stat-label { font-size: 11px; color: #666; margin-top: 2px; }
+
+    .table-wrap { padding: 24px 32px; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; min-width: 600px; }
+    thead th {
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #666;
+      border-bottom: 1px solid #2a2a2a;
+    }
+    tbody tr {
+      border-bottom: 1px solid #1e1e1e;
+      transition: background 0.15s;
+    }
+    tbody tr:hover { background: #1a1a1a; }
+    td { padding: 14px 16px; font-size: 14px; }
+
+    .rank {
+      width: 50px;
+      font-weight: 700;
+      color: #666;
+    }
+    .rank-1 { color: #FFD700; font-size: 18px; }
+    .rank-2 { color: #C0C0C0; font-size: 16px; }
+    .rank-3 { color: #CD7F32; font-size: 16px; }
+
+    .keyword-cell { font-weight: 600; color: #fff; }
+    .keyword-tag {
+      display: inline-block;
+      background: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 16px;
+      padding: 4px 12px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .keyword-tag:hover {
+      background: #ff0000;
+      border-color: #ff0000;
+      color: #fff;
+    }
+
+    .score-bar-wrap { display: flex; align-items: center; gap: 10px; }
+    .score-bar-bg {
+      flex: 1;
+      height: 6px;
+      background: #2a2a2a;
+      border-radius: 3px;
+      overflow: hidden;
+      min-width: 80px;
+    }
+    .score-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #ff0000, #ff6b6b);
+      border-radius: 3px;
+      transition: width 0.4s;
+    }
+    .score-num { font-size: 12px; color: #aaa; min-width: 60px; text-align: right; }
+
+    .views { color: #aaa; font-size: 13px; }
+    .badge {
+      display: inline-block;
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 3px 10px;
+      font-size: 12px;
+      color: #888;
+    }
+
+    .empty { text-align: center; padding: 60px; color: #444; font-size: 16px; }
+    .loading { text-align: center; padding: 80px; color: #666; }
+    .spinner {
+      display: inline-block;
+      width: 32px; height: 32px;
+      border: 3px solid #333;
+      border-top-color: #ff0000;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: 12px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .date-nav {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-left: auto;
+    }
+    .date-btn {
+      padding: 6px 14px;
+      border-radius: 16px;
+      border: 1px solid #333;
+      background: #0f0f0f;
+      color: #aaa;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .date-btn:hover, .date-btn.active { border-color: #ff0000; color: #ff0000; }
+
+    @media (max-width: 600px) {
+      header, .controls, .stats-bar, .table-wrap { padding-left: 16px; padding-right: 16px; }
+      .logo-text h1 { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">🛒</div>
+    <div class="logo-text">
+      <h1>쇼츠 리빙 키워드 대시보드</h1>
+      <p>YouTube Shorts 생활용품 인기 검색어 Top 100</p>
+    </div>
+  </div>
+  <div class="updated" id="updatedAt">데이터 로딩 중...</div>
+</header>
+
+<div class="controls">
+  <input class="search-box" type="text" id="searchInput" placeholder="키워드 검색..." />
+  <span style="font-size:12px;color:#555;">정렬:</span>
+  <button class="sort-btn active" data-sort="score">인기도</button>
+  <button class="sort-btn" data-sort="video_count">영상 수</button>
+  <button class="sort-btn" data-sort="total_views">총 조회수</button>
+  <button class="sort-btn" data-sort="avg_views">평균 조회수</button>
+  <div class="date-nav" id="dateNav"></div>
+</div>
+
+<div class="stats-bar" id="statsBar">
+  <div class="stat"><div class="stat-num" id="totalKeywords">-</div><div class="stat-label">수집 키워드</div></div>
+  <div class="stat"><div class="stat-num" id="topKeyword">-</div><div class="stat-label">1위 키워드</div></div>
+  <div class="stat"><div class="stat-num" id="totalViews">-</div><div class="stat-label">Top10 총 조회수</div></div>
+</div>
+
+<div class="table-wrap">
+  <div class="loading" id="loading">
+    <div class="spinner"></div>
+    <div>데이터 불러오는 중...</div>
+  </div>
+  <table id="mainTable" style="display:none;">
+    <thead>
+      <tr>
+        <th>순위</th>
+        <th>키워드</th>
+        <th style="min-width:180px;">인기도 점수</th>
+        <th>영상 수</th>
+        <th>총 조회수</th>
+        <th>평균 조회수</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+  <div class="empty" id="emptyMsg" style="display:none;">검색 결과가 없습니다.</div>
+</div>
+
+<script>
+  let allData = [];
+  let currentSort = "score";
+  let maxScore = 1;
+  let availableDates = [];
+
+  function fmt(n) {
+    if (n >= 100000000) return (n/100000000).toFixed(1) + "억";
+    if (n >= 10000) return (n/10000).toFixed(1) + "만";
+    if (n >= 1000) return (n/1000).toFixed(1) + "천";
+    return n.toLocaleString();
+  }
+
+  function rankBadge(r) {
+    if (r === 1) return `<span class="rank rank-1">🥇</span>`;
+    if (r === 2) return `<span class="rank rank-2">🥈</span>`;
+    if (r === 3) return `<span class="rank rank-3">🥉</span>`;
+    return `<span class="rank">${r}</span>`;
+  }
+
+  function render(data) {
+    const tbody = document.getElementById("tableBody");
+    const table = document.getElementById("mainTable");
+    const empty = document.getElementById("emptyMsg");
+    const loading = document.getElementById("loading");
+
+    loading.style.display = "none";
+
+    if (!data || data.length === 0) {
+      table.style.display = "none";
+      empty.style.display = "block";
+      return;
+    }
+
+    table.style.display = "table";
+    empty.style.display = "none";
+
+    tbody.innerHTML = data.map(item => `
+      <tr>
+        <td>${rankBadge(item.rank)}</td>
+        <td class="keyword-cell">
+          <span class="keyword-tag" onclick="searchYT('${item.keyword}')">${item.keyword}</span>
+        </td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-bg">
+              <div class="score-bar-fill" style="width:${Math.min(100, item.score/maxScore*100).toFixed(1)}%"></div>
+            </div>
+            <span class="score-num">${fmt(Math.round(item.score))}</span>
+          </div>
+        </td>
+        <td><span class="badge">${item.video_count}개</span></td>
+        <td class="views">${fmt(item.total_views)}</td>
+        <td class="views">${fmt(item.avg_views)}</td>
+      </tr>
+    `).join("");
+  }
+
+  function searchYT(kw) {
+    window.open(`https://www.youtube.com/results?search_query=${encodeURIComponent(kw + " shorts")}&sp=EgIYAQ%253D%253D`, "_blank");
+  }
+
+  function applyFilters() {
+    const q = document.getElementById("searchInput").value.trim().toLowerCase();
+    let filtered = allData.filter(d => !q || d.keyword.toLowerCase().includes(q));
+    filtered = [...filtered].sort((a, b) => b[currentSort] - a[currentSort]);
+    filtered.forEach((item, i) => item.rank = i + 1);
+    render(filtered);
+  }
+
+  async function loadData(dateStr) {
+    document.getElementById("loading").style.display = "block";
+    document.getElementById("mainTable").style.display = "none";
+
+    const path = dateStr ? `data/${dateStr}.json` : "data/latest.json";
+    try {
+      const resp = await fetch(path + "?_=" + Date.now());
+      if (!resp.ok) throw new Error("Not found");
+      const json = await resp.json();
+
+      allData = json.keywords || [];
+      maxScore = Math.max(...allData.map(d => d.score), 1);
+
+      document.getElementById("updatedAt").textContent =
+        "업데이트: " + new Date(json.updated_at).toLocaleString("ko-KR");
+      document.getElementById("totalKeywords").textContent = allData.length + "개";
+      document.getElementById("topKeyword").textContent = allData[0]?.keyword || "-";
+      const top10views = allData.slice(0, 10).reduce((s, d) => s + d.total_views, 0);
+      document.getElementById("totalViews").textContent = fmt(top10views);
+
+      applyFilters();
+    } catch (e) {
+      document.getElementById("loading").innerHTML =
+        '<div style="color:#666;padding:60px;text-align:center;">데이터 없음<br><small style="font-size:12px;margin-top:8px;display:block;">GitHub Actions가 아직 실행 전이거나 데이터 파일이 없습니다.</small></div>';
+    }
+  }
+
+  // 이벤트
+  document.getElementById("searchInput").addEventListener("input", applyFilters);
+
+  document.querySelectorAll(".sort-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".sort-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentSort = btn.dataset.sort;
+      applyFilters();
+    });
+  });
+
+  // 날짜 네비게이션 (최근 7일치 버튼)
+  async function buildDateNav() {
+    const nav = document.getElementById("dateNav");
+    const today = new Date();
+    const btns = [];
+    for (let i = 0; i < 7; i++) {
+      const d = new Date(today);
+      d.setDate(d.getDate() - i);
+      const ds = d.toISOString().slice(0, 10);
+      btns.push(ds);
+    }
+
+    btns.forEach((ds, idx) => {
+      const btn = document.createElement("button");
+      btn.className = "date-btn" + (idx === 0 ? " active" : "");
+      btn.textContent = idx === 0 ? "오늘" : ds.slice(5);
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".date-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        loadData(idx === 0 ? null : ds);
+      });
+      nav.appendChild(btn);
+    });
+  }
+
+  buildDateNav();
+  loadData(null);
+</script>
+</body>
+</html>
