@@ -1,15 +1,18 @@
 """
 YouTube Shorts 생활용품 카테고리 키워드 Top 100 수집기
++ 네이버 데이터랩 검색 트렌드 연동
 매일 GitHub Actions에서 실행됨
 """
 
 import os
 import json
+import time
 import requests
-from datetime import datetime, timezone
-from collections import defaultdict
+from datetime import datetime, timezone, timedelta
 
 API_KEY = os.environ["YT_API_KEY"]
+NAVER_CLIENT_ID = os.environ.get("NAVER_CLIENT_ID", "")
+NAVER_CLIENT_SECRET = os.environ.get("NAVER_CLIENT_SECRET", "")
 TODAY = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
 # 생활용품 시드 키워드 (자동완성으로 확장)
@@ -34,31 +37,27 @@ SEED_KEYWORDS = [
     "냄비추천", "프라이팬추천", "칼추천", "도마추천", "그릇추천",
 ]
 
+
+# ── YouTube ──────────────────────────────────────────────
+
 def get_autocomplete_keywords(seed: str) -> list[str]:
     """YouTube 검색 자동완성으로 키워드 확장"""
     url = "https://suggestqueries.google.com/complete/search"
-    params = {
-        "client": "youtube",
-        "ds": "yt",
-        "q": seed,
-        "hl": "ko",
-    }
+    params = {"client": "youtube", "ds": "yt", "q": seed, "hl": "ko"}
     try:
         resp = requests.get(url, params=params, timeout=8)
-        # 응답이 JSONP 형태일 수 있어서 두 가지 방식으로 파싱
         text = resp.text
         if text.startswith("window.google"):
             import re
             text = re.search(r'\((.+)\)', text).group(1)
         data = json.loads(text)
-        suggestions = [item[0] for item in data[1] if isinstance(item, list)]
-        return suggestions[:10]
+        return [item[0] for item in data[1] if isinstance(item, list)][:10]
     except Exception:
         return []
 
 
 def search_shorts(keyword: str) -> dict:
-    """YouTube Data API로 해당 키워드 쇼츠 검색 결과 가져오기"""
+    """YouTube Data API로 해당 키워드 쇼츠 검색"""
     url = "https://www.googleapis.com/youtube/v3/search"
     params = {
         "key": API_KEY,
@@ -82,22 +81,15 @@ def search_shorts(keyword: str) -> dict:
 
 
 def get_video_stats(video_ids: list[str]) -> dict:
-    """영상 ID 목록으로 조회수 합계 가져오기"""
+    """영상 ID 목록으로 조회수 가져오기"""
     if not video_ids:
         return {"total_views": 0, "avg_views": 0}
     url = "https://www.googleapis.com/youtube/v3/videos"
-    params = {
-        "key": API_KEY,
-        "id": ",".join(video_ids),
-        "part": "statistics",
-    }
+    params = {"key": API_KEY, "id": ",".join(video_ids), "part": "statistics"}
     try:
         resp = requests.get(url, params=params, timeout=10)
         data = resp.json()
-        views = []
-        for item in data.get("items", []):
-            v = int(item.get("statistics", {}).get("viewCount", 0))
-            views.append(v)
+        views = [int(item.get("statistics", {}).get("viewCount", 0)) for item in data.get("items", [])]
         total = sum(views)
         avg = total // len(views) if views else 0
         return {"total_views": total, "avg_views": avg}
@@ -105,10 +97,67 @@ def get_video_stats(video_ids: list[str]) -> dict:
         return {"total_views": 0, "avg_views": 0}
 
 
-def score(result_count: int, total_views: int, avg_views: int) -> float:
-    """인기도 점수 계산 (영상 수 + 조회수 가중 합산)"""
+# ── 네이버 데이터랩 ──────────────────────────────────────
+
+def get_naver_trends(keywords: list[str]) -> dict[str, float]:
+    """네이버 검색 트렌드 점수 가져오기 (0~100)"""
+    if not NAVER_CLIENT_ID or not NAVER_CLIENT_SECRET:
+        return {}
+
+    end_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    start_date = (datetime.now(timezone.utc) - timedelta(days=90)).strftime("%Y-%m-%d")
+
+    scores = {}
+    # 한 번에 최대 5개 키워드 그룹
+    for i in range(0, len(keywords), 5):
+        batch = keywords[i:i+5]
+        keyword_groups = [{"groupName": kw, "keywords": [kw]} for kw in batch]
+        body = {
+            "startDate": start_date,
+            "endDate": end_date,
+            "timeUnit": "month",
+            "keywordGroups": keyword_groups,
+        }
+        try:
+            resp = requests.post(
+                "https://openapi.naver.com/v1/datalab/search",
+                headers={
+                    "X-Naver-Client-Id": NAVER_CLIENT_ID,
+                    "X-Naver-Client-Secret": NAVER_CLIENT_SECRET,
+                    "Content-Type": "application/json",
+                },
+                json=body,
+                timeout=10,
+            )
+            data = resp.json()
+            for result in data.get("results", []):
+                kw_name = result["title"]
+                data_points = result.get("data", [])
+                if data_points:
+                    avg = sum(d["ratio"] for d in data_points) / len(data_points)
+                    scores[kw_name] = round(avg, 1)
+        except Exception as e:
+            print(f"  네이버 API 오류 (배치 {i//5+1}): {e}")
+        time.sleep(0.3)
+
+    return scores
+
+
+# ── 점수 계산 ──────────────────────────────────────────
+
+def yt_score(result_count: int, total_views: int, avg_views: int) -> float:
+    """YouTube 인기도 점수"""
     return result_count * 1000 + total_views * 0.001 + avg_views * 0.01
 
+
+def blue_ocean_score(video_count: int, avg_views: int) -> float:
+    """블루오션 지수: 영상 수 적고 평균 조회수 높을수록 높음"""
+    if video_count == 0:
+        return 0.0
+    return round(avg_views / video_count, 1)
+
+
+# ── 메인 ──────────────────────────────────────────────
 
 def main():
     print(f"[{TODAY}] 키워드 수집 시작")
@@ -118,51 +167,60 @@ def main():
     for seed in SEED_KEYWORDS:
         expanded = get_autocomplete_keywords(seed)
         all_keywords.update(expanded)
-        print(f"  자동완성 '{seed}' → {len(expanded)}개 추가")
-
     all_keywords = list(all_keywords)
     print(f"총 확장 키워드: {len(all_keywords)}개")
 
-    # 2) 각 키워드 점수 계산
+    # 2) YouTube 점수 계산
     results = []
     for i, kw in enumerate(all_keywords):
         sr = search_shorts(kw)
         stats = get_video_stats(sr["video_ids"])
-        s = score(sr["result_count"], stats["total_views"], stats["avg_views"])
         results.append({
-            "rank": 0,
             "keyword": kw,
-            "score": round(s, 1),
+            "yt_score": round(yt_score(sr["result_count"], stats["total_views"], stats["avg_views"]), 1),
             "video_count": sr["result_count"],
             "total_views": stats["total_views"],
             "avg_views": stats["avg_views"],
+            "blue_ocean": blue_ocean_score(sr["result_count"], stats["avg_views"]),
+            "naver_trend": 0.0,
         })
         if (i + 1) % 10 == 0:
-            print(f"  {i+1}/{len(all_keywords)} 처리 완료")
+            print(f"  YouTube {i+1}/{len(all_keywords)} 처리")
 
-    # 3) 점수 기준 정렬 → Top 100
-    results.sort(key=lambda x: x["score"], reverse=True)
+    # 3) 네이버 데이터랩 트렌드 추가
+    if NAVER_CLIENT_ID:
+        print("네이버 데이터랩 수집 중...")
+        naver_scores = get_naver_trends([r["keyword"] for r in results])
+        for r in results:
+            r["naver_trend"] = naver_scores.get(r["keyword"], 0.0)
+        print(f"  네이버 트렌드 {len(naver_scores)}개 수집 완료")
+    else:
+        print("  NAVER_CLIENT_ID 없음 → 네이버 트렌드 스킵")
+
+    # 4) 종합 점수로 정렬 → Top 100
+    for r in results:
+        r["total_score"] = round(r["yt_score"] + r["naver_trend"] * 500, 1)
+
+    results.sort(key=lambda x: x["total_score"], reverse=True)
     top100 = results[:100]
     for i, item in enumerate(top100):
         item["rank"] = i + 1
 
-    # 4) 저장
+    # 5) 저장
     output = {
         "date": TODAY,
         "updated_at": datetime.now(timezone.utc).isoformat(),
+        "has_naver": bool(NAVER_CLIENT_ID),
         "keywords": top100,
     }
 
     os.makedirs("docs/data", exist_ok=True)
-
     with open(f"docs/data/{TODAY}.json", "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
-
     with open("docs/data/latest.json", "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
-    print(f"저장 완료: docs/data/{TODAY}.json")
-    print(f"Top 3: {[x['keyword'] for x in top100[:3]]}")
+    print(f"저장 완료! Top 3: {[x['keyword'] for x in top100[:3]]}")
 
 
 if __name__ == "__main__":
