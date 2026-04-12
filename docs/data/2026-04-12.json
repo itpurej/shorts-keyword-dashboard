@@ -1,337 +1,18 @@
 {
   "date": "2026-04-12",
-  "updated_at": "2026-04-12T12:09:39.154479+00:00",
-  "has_naver": false,
+  "updated_at": "2026-04-12T12:25:44.572994+00:00",
+  "has_naver": true,
   "keywords": [
     {
-      "keyword": "주방도구 영어",
+      "keyword": "욕실인테리어",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
       "avg_views": 0,
       "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
+      "naver_trend": 79.8,
+      "total_score": 39900.0,
       "rank": 1
-    },
-    {
-      "keyword": "살림템연구소",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 2
-    },
-    {
-      "keyword": "주방정리정돈",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 3
-    },
-    {
-      "keyword": "식기세척기 세제 넣는법",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 4
-    },
-    {
-      "keyword": "냉장고정리달인",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 5
-    },
-    {
-      "keyword": "주방정리템",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 6
-    },
-    {
-      "keyword": "욕실용품 공중부양",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 7
-    },
-    {
-      "keyword": "쓰레기통 냄새 제거",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 8
-    },
-    {
-      "keyword": "냉장고정리함",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 9
-    },
-    {
-      "keyword": "화장실청소",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 10
-    },
-    {
-      "keyword": "박나래 주방꿀템",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 11
-    },
-    {
-      "keyword": "살림템 추천",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 12
-    },
-    {
-      "keyword": "미니멀라이프 옷",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 13
-    },
-    {
-      "keyword": "주방용품 추천",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 14
-    },
-    {
-      "keyword": "청소용품전문점",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 15
-    },
-    {
-      "keyword": "최화정 청소꿀템",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 16
-    },
-    {
-      "keyword": "대청소 하는 법",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 17
-    },
-    {
-      "keyword": "집꾸미기",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 18
-    },
-    {
-      "keyword": "청소도구",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 19
-    },
-    {
-      "keyword": "건조기로 곶감 만들기",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 20
-    },
-    {
-      "keyword": "소형가전배송",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 21
-    },
-    {
-      "keyword": "분리수거함 추천",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 22
-    },
-    {
-      "keyword": "생활꿀템 추천",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 23
-    },
-    {
-      "keyword": "소품샵 포장",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 24
-    },
-    {
-      "keyword": "다이소추천템 학용품",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 25
-    },
-    {
-      "keyword": "옷정리 꿀팁",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 26
-    },
-    {
-      "keyword": "주방인테리어 시공",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 27
-    },
-    {
-      "keyword": "신발정리대 조립",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 28
-    },
-    {
-      "keyword": "냄비추천",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 29
-    },
-    {
-      "keyword": "냉장고정리템",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 30
     },
     {
       "keyword": "싱크대정리",
@@ -340,75 +21,185 @@
       "total_views": 0,
       "avg_views": 0,
       "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 31
+      "naver_trend": 78.9,
+      "total_score": 39450.0,
+      "rank": 2
     },
     {
-      "keyword": "수납박스",
+      "keyword": "주방인테리어",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
       "avg_views": 0,
       "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 32
+      "naver_trend": 78.7,
+      "total_score": 39350.0,
+      "rank": 3
     },
     {
-      "keyword": "옷정리 수납장",
+      "keyword": "빨래건조대",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
       "avg_views": 0,
       "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 33
+      "naver_trend": 78.7,
+      "total_score": 39350.0,
+      "rank": 4
     },
     {
-      "keyword": "정리정돈 꿀팁",
+      "keyword": "생활용품",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
       "avg_views": 0,
       "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 34
+      "naver_trend": 78.7,
+      "total_score": 39350.0,
+      "rank": 5
     },
     {
-      "keyword": "미니멀라이프 옷정리",
+      "keyword": "청소도구",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
       "avg_views": 0,
       "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 35
+      "naver_trend": 77.5,
+      "total_score": 38750.0,
+      "rank": 6
     },
     {
-      "keyword": "요리초보 칼추천",
+      "keyword": "주방수납",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
       "avg_views": 0,
       "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 36
+      "naver_trend": 76.3,
+      "total_score": 38150.0,
+      "rank": 7
     },
     {
-      "keyword": "다이소 그릇추천",
+      "keyword": "분리수거함",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
       "avg_views": 0,
       "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 37
+      "naver_trend": 76.0,
+      "total_score": 38000.0,
+      "rank": 8
+    },
+    {
+      "keyword": "집꾸미기",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 74.9,
+      "total_score": 37450.0,
+      "rank": 9
+    },
+    {
+      "keyword": "다이소 화장품",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 74.1,
+      "total_score": 37050.0,
+      "rank": 10
+    },
+    {
+      "keyword": "주방수납장 시트지",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 70.9,
+      "total_score": 35450.0,
+      "rank": 11
+    },
+    {
+      "keyword": "홈인테리어",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 67.9,
+      "total_score": 33950.0,
+      "rank": 12
+    },
+    {
+      "keyword": "베란다정리",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 66.8,
+      "total_score": 33400.0,
+      "rank": 13
+    },
+    {
+      "keyword": "주방도구",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 64.9,
+      "total_score": 32450.0,
+      "rank": 14
+    },
+    {
+      "keyword": "세면대정리",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 61.7,
+      "total_score": 30850.0,
+      "rank": 15
+    },
+    {
+      "keyword": "인테리어소품 쇼핑몰",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 56.9,
+      "total_score": 28450.0,
+      "rank": 16
+    },
+    {
+      "keyword": "청소도구 정리함",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 38.8,
+      "total_score": 19400.0,
+      "rank": 17
+    },
+    {
+      "keyword": "다이소 네일",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 34.1,
+      "total_score": 17050.0,
+      "rank": 18
     },
     {
       "keyword": "프라이팬추천",
@@ -417,111 +208,320 @@
       "total_views": 0,
       "avg_views": 0,
       "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
+      "naver_trend": 33.8,
+      "total_score": 16900.0,
+      "rank": 19
+    },
+    {
+      "keyword": "냉장고정리",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 33.1,
+      "total_score": 16550.0,
+      "rank": 20
+    },
+    {
+      "keyword": "다이소 갑질",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 31.0,
+      "total_score": 15500.0,
+      "rank": 21
+    },
+    {
+      "keyword": "청소방법",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 30.2,
+      "total_score": 15100.0,
+      "rank": 22
+    },
+    {
+      "keyword": "밀대청소기",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 24.4,
+      "total_score": 12200.0,
+      "rank": 23
+    },
+    {
+      "keyword": "소형가전",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 19.9,
+      "total_score": 9950.0,
+      "rank": 24
+    },
+    {
+      "keyword": "생활용품 도매",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 13.1,
+      "total_score": 6550.0,
+      "rank": 25
+    },
+    {
+      "keyword": "생활꿀템",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 12.5,
+      "total_score": 6250.0,
+      "rank": 26
+    },
+    {
+      "keyword": "주방용품 브랜드",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 9.2,
+      "total_score": 4600.0,
+      "rank": 27
+    },
+    {
+      "keyword": "욕실용품",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 7.5,
+      "total_score": 3750.0,
+      "rank": 28
+    },
+    {
+      "keyword": "주방수납정리방법",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 6.9,
+      "total_score": 3450.0,
+      "rank": 29
+    },
+    {
+      "keyword": "현관정리",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 5.2,
+      "total_score": 2600.0,
+      "rank": 30
+    },
+    {
+      "keyword": "다이소 수납용품",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 4.3,
+      "total_score": 2150.0,
+      "rank": 31
+    },
+    {
+      "keyword": "주방수납장 추천",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 4.0,
+      "total_score": 2000.0,
+      "rank": 32
+    },
+    {
+      "keyword": "욕실정리템",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 3.8,
+      "total_score": 1900.0,
+      "rank": 33
+    },
+    {
+      "keyword": "다용도실정리",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 3.5,
+      "total_score": 1750.0,
+      "rank": 34
+    },
+    {
+      "keyword": "세탁용품",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 2.2,
+      "total_score": 1100.0,
+      "rank": 35
+    },
+    {
+      "keyword": "주방청소",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 1.6,
+      "total_score": 800.0,
+      "rank": 36
+    },
+    {
+      "keyword": "주방용품 쇼핑몰",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 1.5,
+      "total_score": 750.0,
+      "rank": 37
+    },
+    {
+      "keyword": "주방용품 추천",
+      "yt_score": 0.0,
+      "video_count": 0,
+      "total_views": 0,
+      "avg_views": 0,
+      "blue_ocean": 0.0,
+      "naver_trend": 1.2,
+      "total_score": 600.0,
       "rank": 38
     },
     {
-      "keyword": "쓰레기통 청소",
+      "keyword": "주방수납장인테리어",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
       "avg_views": 0,
       "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
+      "naver_trend": 0.9,
+      "total_score": 450.0,
       "rank": 39
     },
     {
-      "keyword": "다이소신상화장품",
+      "keyword": "다이소 생활꿀템",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
       "avg_views": 0,
       "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
+      "naver_trend": 0.8,
+      "total_score": 400.0,
       "rank": 40
     },
     {
-      "keyword": "주방용품 영어단어",
+      "keyword": "주방수납장 정리",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
       "avg_views": 0,
       "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
+      "naver_trend": 0.6,
+      "total_score": 300.0,
       "rank": 41
     },
     {
-      "keyword": "휴지통 삭제 복구",
+      "keyword": "정리함 다이소",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
       "avg_views": 0,
       "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
+      "naver_trend": 0.5,
+      "total_score": 250.0,
       "rank": 42
     },
     {
-      "keyword": "싱크대정리함",
+      "keyword": "수납용품",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
       "avg_views": 0,
       "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
+      "naver_trend": 0.5,
+      "total_score": 250.0,
       "rank": 43
     },
     {
-      "keyword": "욕실인테리어 타일",
+      "keyword": "욕실용품 수납",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
       "avg_views": 0,
       "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
+      "naver_trend": 0.2,
+      "total_score": 100.0,
       "rank": 44
     },
     {
-      "keyword": "살림템",
+      "keyword": "욕실용품 공중부양",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
       "avg_views": 0,
       "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
+      "naver_trend": 0.1,
+      "total_score": 50.0,
       "rank": 45
     },
     {
-      "keyword": "청소도구 수납",
+      "keyword": "청소꿀팁",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
       "avg_views": 0,
       "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
+      "naver_trend": 0.1,
+      "total_score": 50.0,
       "rank": 46
     },
     {
-      "keyword": "주방살림템",
+      "keyword": "정리정돈 방법",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
       "avg_views": 0,
       "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
+      "naver_trend": 0.1,
+      "total_score": 50.0,
       "rank": 47
     },
     {
-      "keyword": "다이소신상템",
+      "keyword": "정리함 뜨기",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -532,7 +532,7 @@
       "rank": 48
     },
     {
-      "keyword": "욕실인테리어사진",
+      "keyword": "정리정돈 잘된집",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -543,7 +543,7 @@
       "rank": 49
     },
     {
-      "keyword": "미니멀라이프 책",
+      "keyword": "정리정돈의 중요성",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -554,7 +554,7 @@
       "rank": 50
     },
     {
-      "keyword": "침대밑 수납박스",
+      "keyword": "욕실정리정돈",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -565,7 +565,7 @@
       "rank": 51
     },
     {
-      "keyword": "로보락 청소방법",
+      "keyword": "이케아 수납용품",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -576,7 +576,7 @@
       "rank": 52
     },
     {
-      "keyword": "미니멀라이프",
+      "keyword": "생활용품 정리",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -587,7 +587,7 @@
       "rank": 53
     },
     {
-      "keyword": "프라이팬",
+      "keyword": "주방도구 영어",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -598,7 +598,7 @@
       "rank": 54
     },
     {
-      "keyword": "테무 생활꿀템",
+      "keyword": "청소용품 수납",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -609,7 +609,7 @@
       "rank": 55
     },
     {
-      "keyword": "수납박스 추천",
+      "keyword": "욕실용품 도매시장",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -620,7 +620,7 @@
       "rank": 56
     },
     {
-      "keyword": "행거 가리는 법",
+      "keyword": "살림템 쇼츠",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -631,7 +631,7 @@
       "rank": 57
     },
     {
-      "keyword": "화장실청소 베이킹소다",
+      "keyword": "정리정돈 음악",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -642,7 +642,7 @@
       "rank": 58
     },
     {
-      "keyword": "제습기 비교",
+      "keyword": "주방용품 이사",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -653,7 +653,7 @@
       "rank": 59
     },
     {
-      "keyword": "집청소",
+      "keyword": "청소도구 트롤리",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -664,7 +664,7 @@
       "rank": 60
     },
     {
-      "keyword": "소형가전제품 버리기",
+      "keyword": "살림템꿀템",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -675,7 +675,7 @@
       "rank": 61
     },
     {
-      "keyword": "식기세척기 그릇 넣는 법",
+      "keyword": "주방도구 동요",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -686,7 +686,7 @@
       "rank": 62
     },
     {
-      "keyword": "쿠팡 칼추천",
+      "keyword": "다이소 주방살림템",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -697,7 +697,7 @@
       "rank": 63
     },
     {
-      "keyword": "생활용품 정리",
+      "keyword": "욕실정리수납",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -708,7 +708,7 @@
       "rank": 64
     },
     {
-      "keyword": "베란다정리정돈",
+      "keyword": "주방살림정리",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -719,7 +719,7 @@
       "rank": 65
     },
     {
-      "keyword": "자주 욕실용품",
+      "keyword": "세탁용품 추천",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -730,7 +730,7 @@
       "rank": 66
     },
     {
-      "keyword": "옷걸이로 차문열기",
+      "keyword": "자취 청소꿀템",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -741,7 +741,7 @@
       "rank": 67
     },
     {
-      "keyword": "주방가전 수납",
+      "keyword": "무인양품 수납용품",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -752,7 +752,7 @@
       "rank": 68
     },
     {
-      "keyword": "화장실청소로봇",
+      "keyword": "정리정돈 안되는 사람",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -763,7 +763,7 @@
       "rank": 69
     },
     {
-      "keyword": "글로벌나이프 칼추천",
+      "keyword": "홈리빙스토리",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -774,7 +774,7 @@
       "rank": 70
     },
     {
-      "keyword": "주방가전 수납장",
+      "keyword": "살림템 쿠팡",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -785,7 +785,7 @@
       "rank": 71
     },
     {
-      "keyword": "냉장고정리수납",
+      "keyword": "세탁용품정리",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -796,7 +796,7 @@
       "rank": 72
     },
     {
-      "keyword": "주방도구 정리",
+      "keyword": "인테리어소품만들기",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -807,7 +807,7 @@
       "rank": 73
     },
     {
-      "keyword": "공기청정기",
+      "keyword": "이케아 주방꿀템",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -818,7 +818,7 @@
       "rank": 74
     },
     {
-      "keyword": "건조기 돌리면 안되는 옷",
+      "keyword": "청소꿀템",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -829,7 +829,7 @@
       "rank": 75
     },
     {
-      "keyword": "차량용 청소기추천",
+      "keyword": "생활꿀템 추천",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -840,7 +840,7 @@
       "rank": 76
     },
     {
-      "keyword": "주방세제 소금",
+      "keyword": "박나래 주방꿀템",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -851,7 +851,7 @@
       "rank": 77
     },
     {
-      "keyword": "쓰레기통 비닐 씌우기",
+      "keyword": "생활꿀템발견기",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -862,7 +862,7 @@
       "rank": 78
     },
     {
-      "keyword": "제습기 효과",
+      "keyword": "정리정돈 꿀팁",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -873,7 +873,7 @@
       "rank": 79
     },
     {
-      "keyword": "신발정리",
+      "keyword": "자주 욕실용품",
       "yt_score": 0.0,
       "video_count": 0,
       "total_views": 0,
@@ -882,226 +882,6 @@
       "naver_trend": 0.0,
       "total_score": 0.0,
       "rank": 80
-    },
-    {
-      "keyword": "음식물처리기",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 81
-    },
-    {
-      "keyword": "쿠팡 도마추천",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 82
-    },
-    {
-      "keyword": "주방수납장 시트지",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 83
-    },
-    {
-      "keyword": "쓰레기통 점신 세아쌤",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 84
-    },
-    {
-      "keyword": "코바늘 생활소품",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 85
-    },
-    {
-      "keyword": "수납박스만들기",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 86
-    },
-    {
-      "keyword": "신발정리대 추천",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 87
-    },
-    {
-      "keyword": "미니멀라이프 정리정돈",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 88
-    },
-    {
-      "keyword": "베란다정리",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 89
-    },
-    {
-      "keyword": "미니멀라이프 정리",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 90
-    },
-    {
-      "keyword": "다이소추천템 화장품",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 91
-    },
-    {
-      "keyword": "소형가전 수납",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 92
-    },
-    {
-      "keyword": "다이소신상통",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 93
-    },
-    {
-      "keyword": "분리수거함 공중부양",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 94
-    },
-    {
-      "keyword": "주방세제 디스펜서",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 95
-    },
-    {
-      "keyword": "실용적인 청소꿀팁",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 96
-    },
-    {
-      "keyword": "다이소추천",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 97
-    },
-    {
-      "keyword": "욕실인테리어소품",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 98
-    },
-    {
-      "keyword": "유선청소기 추천",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 99
-    },
-    {
-      "keyword": "욕실용품 도매시장",
-      "yt_score": 0.0,
-      "video_count": 0,
-      "total_views": 0,
-      "avg_views": 0,
-      "blue_ocean": 0.0,
-      "naver_trend": 0.0,
-      "total_score": 0.0,
-      "rank": 100
     }
   ]
 }
