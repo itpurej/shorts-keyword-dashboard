@@ -27,6 +27,8 @@ jobs:
       - name: Run keyword collection
         env:
           YT_API_KEY: ${{ secrets.YT_API_KEY }}
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
         run: python scripts/collect.py
 
       - name: Commit and push data

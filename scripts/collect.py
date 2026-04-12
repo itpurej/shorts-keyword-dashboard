@@ -162,12 +162,13 @@ def blue_ocean_score(video_count: int, avg_views: int) -> float:
 def main():
     print(f"[{TODAY}] 키워드 수집 시작")
 
-    # 1) 자동완성으로 키워드 확장
+    # 1) 자동완성으로 키워드 확장 (YouTube API 하루 한도: 100번)
+    # search.list 100 units × 80개 = 8,000 units (한도 10,000 이내)
     all_keywords = set(SEED_KEYWORDS)
-    for seed in SEED_KEYWORDS:
+    for seed in SEED_KEYWORDS[:20]:  # 시드 20개만 자동완성 확장
         expanded = get_autocomplete_keywords(seed)
         all_keywords.update(expanded)
-    all_keywords = list(all_keywords)
+    all_keywords = list(all_keywords)[:80]  # 최대 80개로 제한
     print(f"총 확장 키워드: {len(all_keywords)}개")
 
     # 2) YouTube 점수 계산
