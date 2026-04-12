@@ -14,12 +14,24 @@ TODAY = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
 # 생활용품 시드 키워드 (자동완성으로 확장)
 SEED_KEYWORDS = [
+    # 기본 카테고리
     "생활용품", "주방용품", "청소용품", "욕실용품", "수납용품",
     "주방도구", "청소도구", "세탁용품", "정리함", "다이소",
     "홈리빙", "인테리어소품", "주방수납", "욕실정리", "청소꿀템",
     "주방꿀템", "생활꿀템", "정리정돈", "주방살림", "살림템",
     "수납박스", "청소기", "밀대청소기", "수세미", "주방세제",
     "분리수거함", "휴지통", "빨래건조대", "옷걸이", "행거",
+    # 트렌드 키워드
+    "다이소신상", "다이소추천", "살림꿀팁", "주방정리", "냉장고정리",
+    "싱크대정리", "욕실소품", "세면대정리", "화장실청소", "주방청소",
+    "집청소", "대청소", "청소방법", "청소꿀팁", "정리수납",
+    "옷정리", "신발정리", "현관정리", "베란다정리", "다용도실정리",
+    "주방인테리어", "욕실인테리어", "수납인테리어", "홈인테리어", "미니멀라이프",
+    "살림노하우", "주부꿀팁", "집꾸미기", "소품샵", "생활소품",
+    # 제품 카테고리
+    "주방가전", "소형가전", "청소기추천", "공기청정기", "제습기",
+    "식기세척기", "음식물처리기", "쓰레기통", "세탁기", "건조기",
+    "냄비추천", "프라이팬추천", "칼추천", "도마추천", "그릇추천",
 ]
 
 def get_autocomplete_keywords(seed: str) -> list[str]:
@@ -32,9 +44,14 @@ def get_autocomplete_keywords(seed: str) -> list[str]:
         "hl": "ko",
     }
     try:
-        resp = requests.get(url, params=params, timeout=5)
-        data = resp.json()
-        suggestions = [item[0] for item in data[1]]
+        resp = requests.get(url, params=params, timeout=8)
+        # 응답이 JSONP 형태일 수 있어서 두 가지 방식으로 파싱
+        text = resp.text
+        if text.startswith("window.google"):
+            import re
+            text = re.search(r'\((.+)\)', text).group(1)
+        data = json.loads(text)
+        suggestions = [item[0] for item in data[1] if isinstance(item, list)]
         return suggestions[:10]
     except Exception:
         return []
